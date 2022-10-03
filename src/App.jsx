@@ -1,7 +1,7 @@
+import QuoteCard from "./components/QuoteCard";
+
 function App() {
-  return (
-    <h1>Hello World!</h1>
-  );
+  return <QuoteCard />;
 }
 
 export default App;
