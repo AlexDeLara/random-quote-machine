@@ -1,6 +1,7 @@
 import Button from "./Button";
 import shareButtons from "../data/shareButtons";
 import { useState, useEffect } from "react";
+import { FaQuoteLeft } from "react-icons/fa";
 
 function QuoteCard(props) {
   const [data, setData] = useState();
@@ -33,8 +34,6 @@ function QuoteCard(props) {
         className={`${
           props.newColor === "slate"
             ? "text-slate-600"
-            : props.newColor === "slate"
-            ? "text-slate-600"
             : props.newColor === "red"
             ? "text-red-600"
             : props.newColor === "orange"
@@ -70,18 +69,16 @@ function QuoteCard(props) {
             : props.newColor === "rose"
             ? "text-rose-600"
             : "text-gray-600"
-        } text-center text-2xl`}
+        } text-center text-3xl`}
       >
-        <i>"</i>
-        {` ${data.content}`}
+        <span><FaQuoteLeft className="inline mr-3 mb-1"/></span>
+        {`${data.content}`}
       </h1>
       <p
         id="author"
         className={`${
           props.newColor === "slate"
             ? "text-slate-600"
-            : props.newColor === "slate"
-            ? "text-slate-600"
             : props.newColor === "red"
             ? "text-red-600"
             : props.newColor === "orange"
@@ -117,10 +114,10 @@ function QuoteCard(props) {
             : props.newColor === "rose"
             ? "text-rose-600"
             : "text-gray-600"
-        } my-4 text-end text-xs`}
+        } my-4 text-end text-sm`}
       >{`- ${data.author}`}</p>
-      <div id="card-buttons" className="flex items-center bg-red-700">
-        <div id="social-buttons" className="flex justify-start">
+      <div id="card-buttons" className="flex items-center pl-2 justify-between">
+        <div id="social-buttons" className="flex justify-start gap-x-2">
           {shareButtons.map((elem, ix) => (
             <Button
               key={ix}
@@ -135,7 +132,6 @@ function QuoteCard(props) {
           id="new-quote"
           buttonContent="New Quote"
           onClick={updateQuote}
-          className="mr-0"
           newColor={props.newColor}
         />
       </div>

@@ -36,8 +36,6 @@ function App() {
       className={`${ // Cannot assign a dynamic name using JS and strinc concatenation because Tailwind CSS wont reconnize the class
         color === "slate"
           ? "bg-slate-600"
-          : color === "slate"
-          ? "bg-slate-600"
           : color === "red"
           ? "bg-red-600"
           : color === "orange"
