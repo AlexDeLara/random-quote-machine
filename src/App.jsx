@@ -71,9 +71,10 @@ function App() {
           : color === "rose"
           ? "bg-rose-600"
           : "bg-gray-600"
-      } h-screen w-screen flex items-center justify-center`}
+      } h-screen w-screen flex items-center justify-center flex-col`}
     >
       <QuoteCard newColor={color} updateColor={pickRandomColor} />
+      <a href="https://github.com/AlexDeLara/" target="_blank" className="mt-6"><p>By AlexDeLara</p></a>
     </main>
   );
 }
