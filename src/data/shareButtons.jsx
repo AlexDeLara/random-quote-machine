@@ -5,12 +5,8 @@ const shareButtons = [
   {
     id: "tweet-quote",
     icon: <GrTwitter />,
-    altText: "alt-text-placeholder",
-  },
-  {
-    id: "tumblr-quote",
-    icon: <GrTumblr />,
-    altText: "alt-text-placeholder",
+    altText: "Make a Tweet!",
+    baseHref: "https://twitter.com/intent/tweet?text="
   },
 ];
 

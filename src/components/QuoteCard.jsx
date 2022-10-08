@@ -125,6 +125,7 @@ function QuoteCard(props) {
               buttonContent={elem.icon}
               altText={elem.altText}
               newColor={props.newColor}
+              shareHref={`${elem.baseHref}${encodeURI(data.content)}`}
             />
           ))}
         </div>
